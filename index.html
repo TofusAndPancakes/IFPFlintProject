@@ -22,7 +22,7 @@
      <div class="header">
         <div class="header_navbar">
             <div class="header_navbar_logo">
-                <a href="#"><img src="images/familycrest.svg" alt=""></a>
+                <a href="index.html"><img src="images/familycrest.svg" alt=""></a>
             </div>
             <div class="header_navbar_shortcut">
                 <a href="artwork.html"><h2 a="artwork.html">ARTWORK</h2></a>
@@ -30,6 +30,22 @@
             <div class="header_navbar_shortcut">
                 <a href="bibliography.html"><h2>BIBLIOGRAPHY</h2></a>
             </div>
+            <div class="header_navbar_shortcut_hamburger" onclick="dropDownInfo()";>
+                <a><h2>MENU</h2></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header_dropdown" id="navActive">
+        <div class="header_dropdown_shortcut">
+            <a href="artwork.html">
+                <h2>ARTWORK</h2>
+            </a>
+        </div>
+        <div class="header_dropdown_shortcut">
+            <a href="bibliography.html">
+                <h2>BIBLIOGRAPHY</h2>
+            </a>
         </div>
     </div>
 
@@ -40,7 +56,7 @@
                 <h2>FLINT INC.</h2>
             </div>
             <div class="background_title_subtitle">
-                <p>Individual Final Project Documentation - Home</p>
+                <p>Home</p>
             </div>
         </div>
         <div class="background_image">
@@ -53,11 +69,20 @@
         <div class="container_padding">
             <div class="container_wide">
                 <!-- Content -->
-                <h2>INTRODUCTION</h2>
+                <h2>VISIT THE PROJECT</h2>
                 <p>Flint Inc. is a video game UI mockup that people can experience with the aim of informing people of addiction in video
                 games. The mock-up features UI practices which research has suggested to be addicting or incentivizing the use of an
                 app. Moreover, to set Flint Inc. apart, Flint Inc. has its own world, style and characters which greatly influence the
                 style of the UI.</p>
+            </div>
+
+            <div class="container_calltoaction">
+                <div class="container_button">
+                    <a href="#"><h2>OPEN FIGMA</h2></a>
+                </div>
+                <div class="container_button">
+                    <a href=""><h2>OPEN PDF</h2></a>
+                </div>
             </div>
 
             <hr>
@@ -227,5 +252,23 @@
     </div>
 
   </body>
+
+
+  <!-- Dropdown -->
+  <script>
+    function dropDownInfo(){
+        var navBar = document.getElementById("navActive");
+        var navBarStyle = getComputedStyle(navBar);
+        if (navBarStyle.getPropertyValue('visibility') == "hidden") {
+            navBar.style.visibility = 'visible';
+            navBar.style.opacity = 1;
+            console.log(navBarStyle.getPropertyValue('visibility'));
+        } else {
+            navBar.style.visibility = 'hidden';
+            navBar.style.opacity = 0;
+        }
+    }
+
+  </script>
 
 </html>

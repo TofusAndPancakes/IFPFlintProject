@@ -25,13 +25,36 @@
                 <a href="index.html"><img src="images/familycrest.svg" alt=""></a>
             </div>
             <div class="header_navbar_shortcut">
-                <a href="artwork.html"><h2>ARTWORK</h2></a>
+                <a href="artwork.html">
+                    <h2 a="artwork.html">ARTWORK</h2>
+                </a>
             </div>
             <div class="header_navbar_shortcut">
-                <a href="#"><h2>BIBLIOGRAPHY</h2></a>
+                <a href="bibliography.html">
+                    <h2>BIBLIOGRAPHY</h2>
+                </a>
+            </div>
+            <div class="header_navbar_shortcut_hamburger" onclick="dropDownInfo()" ;>
+                <a>
+                    <h2>MENU</h2>
+                </a>
             </div>
         </div>
     </div>
+    
+    <div class="header_dropdown" id="navActive">
+        <div class="header_dropdown_shortcut">
+            <a href="artwork.html">
+                <h2>ARTWORK</h2>
+            </a>
+        </div>
+        <div class="header_dropdown_shortcut">
+            <a href="bibliography.html">
+                <h2>BIBLIOGRAPHY</h2>
+            </a>
+        </div>
+    </div>
+
 
     <!-- Header -->
     <div class="background_compact" style="background-image: url('images/BackgroundHeaderCompact.png')">
@@ -40,7 +63,7 @@
                 <h2>FLINT INC.</h2>
             </div>
             <div class="background_compact_title_subtitle">
-                <p>Individual Final Project Documentation - Bibliography</p>
+                <p>Bibliography</p>
             </div>
         </div>
         <div class="background_compact_image">
@@ -65,7 +88,7 @@
                 Bengkulu, Indonesia </i>[online]. pp. 1-6, Available from: <u>https://ieeexplore.ieee.org/document/9588976?arnumber=9588976</u>
                 [Accessed on February 20 2023]
                 <br><br>
-                Koeder M. J. Tanaka E. (2017). Game of chance elements in free-to-play mobile games. A freemium business model
+                Koeder M. J. and Tanaka E. (2017). Game of chance elements in free-to-play mobile games. A freemium business model
                 monetization tool in need of self- regulation?, In: <i>28th European Regional Conference of the International
                 Telecommunications Society (ITS): "Competition and Regulation in the Information Age", 30th July - 2nd August, 2017,
                 Passau, Germany </i>[online], Available from: <u>https://www.econstor.eu/bitstream/10419/169473/1/Koeder-Tanaka.pdf</u> [accessed
@@ -85,7 +108,7 @@
                 <u>https://search.ebscohost.com/login.aspx?direct=true&AuthType=sso,cpid&custid=ns000798&db=cat05651a&AN=itd.58564&site=eds-live&scope=site</u>
                 [accessed on 26 October 2022]
                 <br><br>
-                Shibuya, A., Teramoto, M., Shoun, A., & Akiyama, K. (2019). Long-Term Effects of In-Game Purchases and Event Game
+                Shibuya, A., Teramoto, M., Shoun, A., and Akiyama, K. (2019). Long-Term Effects of In-Game Purchases and Event Game
                 Mechanics on Young Mobile Social Game Players in Japan. <i>Simulation & Gaming</i> [online], 50(1), 76–92. Available from:
                 <u>https://doi.org/10.1177/1046878118819677</u> [accessed on 26 October 2022]
                 <br><br>
@@ -113,6 +136,23 @@
     <div class="footer">
         <p>Christofer Alvin - 2023</p>
     </div>
+
+    <!-- Dropdown -->
+    <script>
+        function dropDownInfo() {
+            var navBar = document.getElementById("navActive");
+            var navBarStyle = getComputedStyle(navBar);
+            if (navBarStyle.getPropertyValue('visibility') == "hidden") {
+                navBar.style.visibility = 'visible';
+                navBar.style.opacity = 1;
+                console.log(navBarStyle.getPropertyValue('visibility'));
+            } else {
+                navBar.style.visibility = 'hidden';
+                navBar.style.opacity = 0;
+            }
+        }
+
+    </script>
 
 </body>
 
