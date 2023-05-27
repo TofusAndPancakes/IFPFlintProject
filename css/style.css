@@ -621,3 +621,11 @@ h2 {
         text-decoration: none;
         color: #F4F3EE;
 }
+
+.smallerFont p {
+        font-family: "Quicksand", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.2;
+
+        font-style: italic;
+}
